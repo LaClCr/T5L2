@@ -3,7 +3,11 @@ cantitatParells=0
 cantitatImparells=0
 limiteLineas=`cat numeros.txt | wc -l`
 
+echo ""
+echo "==============="
 echo "NOMBRES PARELLS"
+echo "==============="
+
 
 for i in `seq 1 $limiteLineas`
 do
@@ -18,9 +22,15 @@ do
 
 done
 
+echo ""
 echo "Quantitat de nombres parells: $cantitatParells."
 
+echo ""
+echo "==============="
 echo "NOMBRES IMPARELLS"
+echo "==============="
+
+
 
 for i in `seq 1 $limiteLineas`
 do
@@ -35,4 +45,5 @@ do
 
 done
 
+echo ""
 echo "Quantitat de nombres Imparells: $cantitatImparells."
