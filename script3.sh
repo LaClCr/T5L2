@@ -10,13 +10,16 @@ do
     if [ $preci -eq '0' ]
     then    
         cont=0
-        for i in lunes martes miercoles jueves viernes sabado domingo lunes_siguiente martes_siguiente miercoles_siguiente
+        while [ $cont -le $numDia ]
         do
-            cont=$((cont + 1))
-            if [ $cont -eq $numDia ]
-            then
+            for i in lunes martes miercoles jueves viernes sabado domingo 
+            do
+                cont=$((cont + 1))
+                if [ $cont -eq $numDia ]
+                then
                 echo "El $i no llovió"
-            fi
+             fi
+            done
         done
     fi
 
